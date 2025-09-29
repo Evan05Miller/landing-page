@@ -6,7 +6,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About MillerSites
+              About ScaleUp
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
               Passionate web development focused on helping small businesses succeed online
@@ -24,7 +24,7 @@ export default function About() {
                 Meet the Developer
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Hi, I'm Evan Miller, the founder and lead developer at MillerSites. With a passion for creating 
+                Hi, I'm Evan Miller, the founder and lead developer at ScaleUp. With a passion for creating 
                 beautiful, functional websites, I specialize in helping small businesses establish their online presence.
               </p>
               <p className="text-lg text-gray-600 mb-6">
@@ -33,8 +33,8 @@ export default function About() {
                 with a personal touch to deliver solutions that work.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-                projects, or helping local businesses understand the importance of having a strong online presence.
+                I’m passionate about effective advertising and marketing strategies that drive 
+                sales growth and strengthen the community around a company.
               </p>
             </div>
 

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MillerSites - Professional Web Development for Small Businesses",
+  title: "ScaleUp - Professional Web Development for Small Businesses",
   description: "Custom websites and web development services for small businesses. Modern, responsive, and affordable solutions.",
 };
 
@@ -32,7 +32,7 @@ export default function RootLayout({
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <a href="/" className="text-2xl font-bold text-blue-600">
-                  MillerSites
+                  ScaleUp
                 </a>
               </div>
               <div className="hidden md:block">
@@ -63,7 +63,7 @@ export default function RootLayout({
   <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">MillerSites</h3>
+        <h3 className="text-lg font-semibold mb-4">ScaleUp</h3>
         <p className="text-gray-400">Professional web development services for small businesses.</p>
       </div>
 
@@ -99,7 +99,7 @@ export default function RootLayout({
     </div>
 
     <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-      <p className="text-gray-400">&copy; 2025 MillerSites. All rights reserved.</p>
+      <p className="text-gray-400">&copy; 2025 ScaleUp. All rights reserved.</p>
     </div>
   </div>
 </footer>

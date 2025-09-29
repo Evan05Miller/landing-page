@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
@@ -24,7 +26,7 @@ export default function About() {
                 Meet the Developer
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Hi, I'm Evan Miller, the founder and lead developer at ScaleUp. With a passion for creating 
+                Hi, I&apos;m Evan Miller, the founder and lead developer at ScaleUp. With a passion for creating 
                 beautiful, functional websites, I specialize in helping small businesses establish their online presence.
               </p>
               <p className="text-lg text-gray-600 mb-6">
@@ -108,7 +110,7 @@ export default function About() {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h3 className="text-3xl font-bold text-white mb-6">Get in Touch</h3>
     <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-      Feel free to reach out via email or connect with me on LinkedIn. I'm always open to discussing new projects, collaborations, or ideas.
+      Feel free to reach out via email or connect with me on LinkedIn. I&apos;m always open to discussing new projects, collaborations, or ideas.
     </p>
     <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
       <a
@@ -179,7 +181,7 @@ export default function About() {
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             To bridge the gap between small businesses and the digital world by creating affordable, 
-            professional websites that help them compete and thrive in today's online marketplace.
+            professional websites that help them compete and thrive in today&apos;s online marketplace.
           </p>
           
         </div>
@@ -192,11 +194,11 @@ export default function About() {
             Ready to Work Together?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss your project and create something amazing for your business.
+            Let&apos;s discuss your project and create something amazing for your business.
           </p>
-          <a href="/#contact" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+          <Link href="/#contact" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
             Get Started Today
-          </a>
+          </Link>
         </div>
       </section>
     </div>

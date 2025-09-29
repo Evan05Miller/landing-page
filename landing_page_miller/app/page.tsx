@@ -145,7 +145,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-6">Ready to Get Started?</h3>
               <p className="text-blue-100 mb-6"> 
-                Let's discuss your project and create a custom solution that fits your business needs and budget.
+                Let&apos;s discuss your project and create a custom solution that fits your business needs and budget.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
@@ -180,7 +180,7 @@ export default function Home() {
               Get Your Free Quote Today
             </h2>
             <p className="text-xl text-gray-600">
-              Ready to transform your online presence? Let's talk about your project.
+              Ready to transform your online presence? Let&apos;s talk about your project.
             </p>
           </div>
           

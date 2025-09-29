@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Portfolio() {
   const projects = [
     {
@@ -68,7 +70,7 @@ export default function Portfolio() {
               Our Portfolio
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Explore our recent projects and see how we've helped small businesses establish their online presence
+              Explore our recent projects and see how we&apos;ve helped small businesses establish their online presence
             </p>
           </div>
         </div>
@@ -166,7 +168,7 @@ export default function Portfolio() {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Don't just take our word for it - hear from the businesses we've helped
+              Don&apos;t just take our word for it - hear from the businesses we&apos;ve helped
             </p>
           </div>
 
@@ -182,8 +184,8 @@ export default function Portfolio() {
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                "MillerSites transformed our online presence completely. Our new website is professional, 
-                easy to navigate, and has significantly increased our online bookings."
+                &quot;ScaleUp transformed our online presence completely. Our new website is professional, 
+                easy to navigate, and has significantly increased our online bookings.&quot;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
@@ -207,8 +209,8 @@ export default function Portfolio() {
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                "Working with Evan was a pleasure. He understood our vision and delivered exactly what we needed. 
-                Our patients love the new appointment booking system."
+                &quot;Working with Evan was a pleasure. He understood our vision and delivered exactly what we needed. 
+                Our patients love the new appointment booking system.&quot;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
@@ -232,8 +234,8 @@ export default function Portfolio() {
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                "The website exceeded our expectations. It's fast, beautiful, and has helped us attract 
-                new members. Evan's ongoing support has been invaluable."
+                &quot;The website exceeded our expectations. It&apos;s fast, beautiful, and has helped us attract 
+                new members. Evan&apos;s ongoing support has been invaluable.&quot;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
@@ -312,11 +314,11 @@ export default function Portfolio() {
             Ready to Start Your Project?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's create something amazing for your business. Get your free quote today.
+            Let&apos;s create something amazing for your business. Get your free quote today.
           </p>
-          <a href="/#contact" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+          <Link href="/#contact" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
             Get Your Free Quote
-          </a>
+          </Link>
         </div>
       </section>
     </div>

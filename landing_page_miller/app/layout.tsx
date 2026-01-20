@@ -100,7 +100,7 @@ export default function RootLayout({
     </div>
 
     <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-      <p className="text-gray-400">&copy; 2025 ScaleUp. All rights reserved.</p>
+      <p className="text-gray-400">&copy; 2026 ScaleUp. All rights reserved.</p>
     </div>
   </div>
 </footer>

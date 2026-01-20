@@ -154,19 +154,19 @@ export default function About() {
 
       <div className="text-center">
         <div className="w-full h-24 bg-green-100 rounded-lg flex items-center justify-center mx-auto text-green-800 text-lg font-semibold px-4 text-center">
-          Node.js & Express
+          WordPress
         </div>
       </div>
 
       <div className="text-center">
         <div className="w-full h-24 bg-purple-100 rounded-lg flex items-center justify-center mx-auto text-purple-800 text-lg font-semibold px-4 text-center">
-          TypeScript
+          Responsive Web Design
         </div>
       </div>
 
       <div className="text-center">
         <div className="w-full h-24 bg-orange-100 rounded-lg flex items-center justify-center mx-auto text-orange-800 text-lg font-semibold px-4 text-center">
-          Git & GitHub
+          SEO Strategies
         </div>
       </div>
     </div>

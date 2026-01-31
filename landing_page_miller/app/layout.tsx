@@ -44,9 +44,12 @@ export default function RootLayout({
                   <a href="/about" className="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                     About
                   </a>
-                  <a href="/about" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                    Contact
+                  <a href="/portfolio" className="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                    Portfolio
                   </a>
+                  <Link href="/#contact" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                    Contact
+                  </Link>
                 </div>
               </div>
               <div className="md:hidden">
@@ -77,6 +80,11 @@ export default function RootLayout({
           <li>
             <a href="/about" className="text-gray-400 hover:text-white transition-colors">About</a>
           </li>
+          <li>
+          <a href="/portfolio" className="text-gray-400 hover:text-white transition-colors">
+                    Portfolio
+                  </a>
+                  </li>
         </ul>
       </div>
 

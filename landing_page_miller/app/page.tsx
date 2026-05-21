@@ -47,8 +47,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What ScaleUp Offers</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive web development services tailored for small business growth
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Comprehensive website services tailored specficially for small business growth
             </p>
           </ScrollReveal>
 
@@ -129,7 +129,6 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-gray-600">Quick answers to common questions about working with us</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <FAQ />
@@ -138,11 +137,11 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-20 bg-emerald-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get Your Free Quote Today</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-3xl md:text-4xl font-bold text-emerald-950 mb-4">Get Your Free Quote Today</h2>
+            <p className="text-xl text-emerald-800/90">
               Ready to transform your online presence? Let&apos;s talk about your project.
             </p>
           </ScrollReveal>

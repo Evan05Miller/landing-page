@@ -60,20 +60,20 @@ export default function ContactForm() {
   };
 
   const inputClass = (name: string) =>
-    `w-full px-4 py-3 border rounded-xl transition-all duration-200 ${
+    `w-full px-4 py-3 border rounded-xl bg-white transition-all duration-200 ${
       focusedField === name
-        ? 'border-emerald-500 ring-2 ring-emerald-500/20 bg-emerald-50/30'
-        : 'border-gray-200 hover:border-emerald-300'
+        ? 'border-emerald-600 ring-2 ring-emerald-600/20'
+        : 'border-emerald-200 hover:border-emerald-400'
     } focus:outline-none`;
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-emerald-100"
+      className="bg-white p-8 md:p-10 rounded-2xl shadow-lg shadow-emerald-900/10 border border-emerald-200/80"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="name" className="block text-sm font-medium text-emerald-900 mb-2">
             Name *
           </label>
           <input
@@ -91,7 +91,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-emerald-900 mb-2">
             Email *
           </label>
           <input
@@ -111,7 +111,7 @@ export default function ContactForm() {
       </div>
 
       <div className="mb-6">
-        <label htmlFor="business" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="business" className="block text-sm font-medium text-emerald-900 mb-2">
           Business Name
         </label>
         <input
@@ -129,7 +129,7 @@ export default function ContactForm() {
       </div>
 
       <div className="mb-6">
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="message" className="block text-sm font-medium text-emerald-900 mb-2">
           Project Details *
         </label>
         <textarea
@@ -148,7 +148,7 @@ export default function ContactForm() {
       </div>
 
       {submitStatus === 'success' && (
-        <div className="mb-6 p-4 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded-xl">
+        <div className="mb-6 p-4 bg-emerald-100 border border-emerald-300 text-emerald-900 rounded-xl">
           <div className="flex items-center">
             <svg className="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />

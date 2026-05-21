@@ -5,15 +5,15 @@ import { useState } from 'react';
 const faqs = [
   {
     q: 'How long does a typical project take?',
-    a: 'Most small business websites are delivered within 2–4 weeks, depending on scope and content readiness. We keep you updated at every milestone.',
+    a: 'Most small business websites are delivered within 2-4 weeks, depending on scope and content readiness. I keep you updated at every milestone.',
   },
   {
     q: 'What is included in a free quote?',
-    a: 'Your quote covers design approach, page structure, timeline, and transparent pricing — with no obligation and no hidden fees.',
+    a: 'Your quote covers design approach, page structure, timeline, and transparent pricing with no obligation and no hidden fees.',
   },
   {
     q: 'Do you provide ongoing support?',
-    a: 'Yes. We offer maintenance packages for updates, security, and performance so your site stays fast and reliable.',
+    a: 'Yes. I offer maintenance packages for updates, security, and performance so your site stays fast and reliable.',
   },
   {
     q: 'Will my site work on mobile devices?',

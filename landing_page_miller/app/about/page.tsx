@@ -1,6 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import ScrollReveal from '../components/ScrollReveal';
-import SkillBar from '../components/SkillBar';
 
 const approach = [
   { title: 'Listen First', desc: 'I take time to understand your business goals and target audience before proposing solutions.' },
@@ -9,74 +9,78 @@ const approach = [
   { title: 'Support Always', desc: 'Ongoing maintenance and support to keep your website running smoothly and securely.' },
 ];
 
-const skills = [
-  { label: 'React & Next.js', level: 90 },
-  { label: 'WordPress', level: 85 },
-  { label: 'Responsive Design', level: 95 },
-  { label: 'SEO Strategies', level: 80 },
-];
-
 export default function About() {
   return (
     <div className="min-h-screen">
-      <section className="hero-mesh text-white py-20 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fadeInUp">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About ScaleUp</h1>
-          <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto">
-            Passionate web development focused on helping small businesses succeed online
-          </p>
+      <section className="pt-28 pb-16 bg-emerald-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="flex flex-col sm:flex-row gap-8 items-center sm:items-start">
+              <div className="flex-shrink-0 mt-8 sm:mt-12">
+                <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-[3px] border-white/80 shadow-lg shadow-black/30">
+                  <Image
+                    src="/evan-miller.png"
+                    alt="Evan Miller"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, 288px"
+                    priority
+                  />
+                </div>
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Meet the Developer</h2>
+                <p className="text-lg text-emerald-100/90 mb-6 leading-relaxed">
+                  Hi, I&apos;m Evan Miller, the founder and lead developer at ScaleUp. With a passion for creating
+                  beautiful, functional websites, I specialize in helping small businesses establish their online presence.
+                  I&apos;m currently a Junior CS major at the University of Delaware looking for opportunities to learn and grow in this field.
+                </p>
+                <p className="text-lg text-emerald-100/90 mb-6 leading-relaxed">
+                  I believe every business, regardless of size, deserves a professional website that reflects
+                  their brand and helps them connect with customers. My approach combines modern web technologies
+                  with a personal touch to deliver solutions that work.
+                </p>
+                <p className="text-lg text-emerald-100/90 leading-relaxed">
+                  I&apos;m passionate about effective advertising and marketing strategies that drive
+                  sales growth and strengthen the community around a company.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-emerald-50/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Meet the Developer</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Hi, I&apos;m Evan Miller, the founder and lead developer at ScaleUp. With a passion for creating
-                beautiful, functional websites, I specialize in helping small businesses establish their online presence.
-              </p>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                I believe every business, regardless of size, deserves a professional website that reflects
-                their brand and helps them connect with customers. My approach combines modern web technologies
-                with a personal touch to deliver solutions that work.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                I&apos;m passionate about effective advertising and marketing strategies that drive
-                sales growth and strengthen the community around a company.
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal delay={120}>
-              <div className="bg-emerald-50/80 border border-emerald-100 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">My Approach</h3>
-                <div className="space-y-5">
-                  {approach.map((item) => (
-                    <div key={item.title} className="flex items-start group">
-                      <div className="flex-shrink-0 w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center group-hover:bg-emerald-600 transition-colors">
-                        <svg
-                          className="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                      <div className="ml-4">
-                        <h4 className="text-lg font-semibold text-gray-900">{item.title}</h4>
-                        <p className="text-gray-600">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
+          <ScrollReveal>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">My Approach</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {approach.map((item) => (
+                <div
+                  key={item.title}
+                  className="flex items-start group bg-white rounded-xl p-5 border border-emerald-100 shadow-sm"
+                >
+                  <div className="flex-shrink-0 w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center group-hover:bg-emerald-600 transition-colors">
+                    <svg
+                      className="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-semibold text-gray-900">{item.title}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
-              </div>
-            </ScrollReveal>
-          </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -108,43 +112,15 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-emerald-50/80 to-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Skills & Technologies</h2>
-            <p className="text-xl text-gray-600">
-              Modern tools to create fast, secure, and scalable web solutions
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-emerald-100 space-y-6">
-              {skills.map((skill) => (
-                <SkillBar key={skill.label} label={skill.label} level={skill.level} />
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
       <section className="py-20 bg-white">
         <ScrollReveal className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">My Mission</h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            To bridge the gap between small businesses and the digital world by creating affordable,
-            professional websites that help them compete and thrive in today&apos;s online marketplace.
-          </p>
-        </ScrollReveal>
-      </section>
-
-      <section className="py-20 hero-mesh text-white">
-        <ScrollReveal className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work Together?</h2>
-          <p className="text-xl text-emerald-100 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-emerald-950 mb-6">Ready to Work Together?</h2>
+          <p className="text-xl text-emerald-800/90 mb-8">
             Let&apos;s discuss your project and create something amazing for your business.
           </p>
           <Link
             href="/#contact"
-            className="inline-block bg-white text-emerald-800 hover:bg-emerald-50 px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:-translate-y-0.5 shadow-lg"
+            className="inline-block btn-primary text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:-translate-y-0.5 shadow-lg"
           >
             Get Started Today
           </Link>

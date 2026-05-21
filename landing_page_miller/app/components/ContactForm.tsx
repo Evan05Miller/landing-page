@@ -12,6 +12,7 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -58,8 +59,18 @@ export default function ContactForm() {
     }
   };
 
+  const inputClass = (name: string) =>
+    `w-full px-4 py-3 border rounded-xl transition-all duration-200 ${
+      focusedField === name
+        ? 'border-emerald-500 ring-2 ring-emerald-500/20 bg-emerald-50/30'
+        : 'border-gray-200 hover:border-emerald-300'
+    } focus:outline-none`;
+
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-emerald-100"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -72,7 +83,9 @@ export default function ContactForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            onFocus={() => setFocusedField('name')}
+            onBlur={() => setFocusedField(null)}
+            className={inputClass('name')}
             placeholder="Your name"
             disabled={isSubmitting}
           />
@@ -88,13 +101,15 @@ export default function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            onFocus={() => setFocusedField('email')}
+            onBlur={() => setFocusedField(null)}
+            className={inputClass('email')}
             placeholder="your@email.com"
             disabled={isSubmitting}
           />
         </div>
       </div>
-      
+
       <div className="mb-6">
         <label htmlFor="business" className="block text-sm font-medium text-gray-700 mb-2">
           Business Name
@@ -105,12 +120,14 @@ export default function ContactForm() {
           name="business"
           value={formData.business}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          onFocus={() => setFocusedField('business')}
+          onBlur={() => setFocusedField(null)}
+          className={inputClass('business')}
           placeholder="Your business name"
           disabled={isSubmitting}
         />
       </div>
-      
+
       <div className="mb-6">
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
           Project Details *
@@ -122,17 +139,18 @@ export default function ContactForm() {
           rows={4}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          onFocus={() => setFocusedField('message')}
+          onBlur={() => setFocusedField(null)}
+          className={inputClass('message')}
           placeholder="Tell us about your project..."
           disabled={isSubmitting}
         />
       </div>
 
-      {/* Status Messages */}
       {submitStatus === 'success' && (
-        <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+        <div className="mb-6 p-4 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded-xl">
           <div className="flex items-center">
-            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
             </svg>
             Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
@@ -141,20 +159,20 @@ export default function ContactForm() {
       )}
 
       {submitStatus === 'error' && (
-        <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+        <div className="mb-6 p-4 bg-red-50 border border-red-300 text-red-700 rounded-xl">
           <div className="flex items-center">
-            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
             </svg>
             {errorMessage}
           </div>
         </div>
       )}
-      
+
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-md transition-colors flex items-center justify-center"
+        className="w-full btn-primary disabled:opacity-60 text-white font-semibold py-3.5 px-6 rounded-xl flex items-center justify-center"
       >
         {isSubmitting ? (
           <>

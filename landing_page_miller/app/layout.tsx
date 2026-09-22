@@ -59,6 +59,26 @@ export default function RootLayout({
                       Portfolio
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/design-process" className="text-emerald-100/70 hover:text-white transition-colors">
+                      Design Process
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/seo" className="text-emerald-100/70 hover:text-white transition-colors">
+                      SEO
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/aeo" className="text-emerald-100/70 hover:text-white transition-colors">
+                      AEO
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/accessibility" className="text-emerald-100/70 hover:text-white transition-colors">
+                      Accessibility
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
@@ -81,8 +101,11 @@ export default function RootLayout({
               </div>
             </div>
 
-            <div className="border-t border-emerald-800/60 mt-8 pt-8 text-center">
+            <div className="border-t border-emerald-800/60 mt-8 pt-8 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
               <p className="text-emerald-100/50">&copy; 2026 ScaleUp. All rights reserved.</p>
+              <Link href="/privacy" className="text-emerald-100/70 hover:text-white transition-colors text-sm">
+                Privacy Policy
+              </Link>
             </div>
           </div>
         </footer>

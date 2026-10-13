@@ -5,8 +5,23 @@ import PortfolioPatternSection from "../components/PortfolioPatternSection";
 import juleshullfrontpage from "./images/juleshullfrontpage.png";
 import ewbfrontpage from "./images/ewbfrontpage.png";
 import henhacksfrontpage from "./images/henhacksfrontpage.png";
+import mikeCoreyFrontpage from "./images/Mike Corey Website.png";
 
 const projects = [
+  {
+    id: 4,
+    title: "Mike Corey Sports",
+    description:
+      "A website for ESPN and NBC sportscaster Mike Corey, covering his play-by-play career, teaching, speaking, and documentary work.",
+    technologies: ["Next.JS", "Tailwind CSS", "React"],
+    features: [
+      "Upcoming Broadcast Schedule",
+      "Career and On-Air Experience",
+      "Mobile Responsive",
+    ],
+    liveUrl: "https://www.mikecoreysports.com/",
+    image: mikeCoreyFrontpage,
+  },
     {
     id: 1,
     title: "University of Delaware Engineers Without Borders",
